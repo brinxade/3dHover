@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d Hover Usage</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="3dHover.js"></script>
+</head>
+<body>
+    <script>
+        /* This is all the javascript/jquery code you need to get it working */
+        $(document).ready(function(){
+            $(".3d-hover").mouseHover3d({
+                enableShadow:true, 
+                primaryColor:"#fff", 
+                shadowColor:"#aaa", 
+                updateRate:20});
+            });
+    </script>
+
+    <style>
+        .your-container {
+            display:flex;
+        }
+
+        .your-card {
+            width:400px;
+            height:250px;
+            margin:20px;
+        }
+
+        .your-card .inner {
+            border-radius:10px;
+        }
+
+    </style>
+
+    <header>
+        <h1>3d Hover</h1>
+    </header>
+
+    <main>
+        <!-- Simple markup with any block container with a nested block container -->
+        <div class="your-container">
+            <div class="your-card 3d-hover"><div class="inner"></div></div>
+            <div class="your-card 3d-hover"><div class="inner"></div></div>
+            <div class="your-card 3d-hover"><div class="inner"></div></div>
+            <div class="your-card 3d-hover"><div class="inner"></div></div>
+        </div>
+    </main>
+
+    <footer>
+        <p align="center">Made by Brinxade &copy; 2021</p>
+    </footer>
+</body>
+</html>
